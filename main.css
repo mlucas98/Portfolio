@@ -1,0 +1,25 @@
+body{
+    box-sizing: border-box;
+}
+.container {
+    width: 90%;
+    padding: 0.5% 1%;
+    background-color: rgba(245, 245, 245, 0.8);
+}
+
+.proyecto {
+    display: inline-block;
+    width: 31%;
+    height: 200px;
+    background-size: cover;
+}
+
+h2{
+    text-align: center;
+    position: relative;
+    top: 60%;
+}
+
+h2 a{
+    text-decoration: none;
+}
