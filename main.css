@@ -3,6 +3,7 @@ body{
 }
 .container {
     width: 90%;
+    margin: 0 auto;
     padding: 0.5% 1%;
     background-color: rgba(245, 245, 245, 0.8);
 }
@@ -22,9 +23,11 @@ body{
 }
 
 h2{
+    padding: 1% 0;
     text-align: center;
     position: relative;
     top: 60%;
+    background-color: rgba(240, 240, 240, 0.8);
 }
 
 h2 a{

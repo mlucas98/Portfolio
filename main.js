@@ -24,8 +24,8 @@ function agregarElemento(arreglo){
     }
 }
 
+arrayDeProyectos.push('Pixel-Art');
 arrayDeProyectos.push('Rompecabezas');
-arrayDeProyectos.push('Prueba');
 
-// agregarElemento(arrayDeProyectos);
+agregarElemento(arrayDeProyectos);
 
