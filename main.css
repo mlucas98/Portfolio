@@ -13,23 +13,38 @@ body{
     width: 100%;
     height: 200px;
 }
-
-.fondo {
+.ejercicio {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+}
+.fondoP {
     display: inline-block;
     width: 31%;
     height: 200px;
     background-size: cover;
     margin: 1%;
 }
+.fondoE {
+    display: inline-block;
+    width: 23%;
+    height: 200px;
+    background-size: cover;
+    margin: 1%;
+}
+h2 {
+    font-size: xx-large;
+}
 
-h2{
+h3{
     padding: 1% 0;
     text-align: center;
     position: relative;
     top: 60%;
     background-color: rgba(240, 240, 240, 0.8);
+    font-size: x-large;
 }
 
-h2 a{
+h3 a{
     text-decoration: none;
 }
