@@ -4,8 +4,8 @@ var arrayDeEjercicios = [];
 function agregarElemento(arreglo){
     for(let i=arreglo.length-1; i>=0;i--){
         let name = arreglo[i];
-        console.log(i);
-        console.log(name);
+        //console.log(i);
+        //console.log(name);
         let divPro = $("#proyectos");
         let divEje = $("#ejercicios");
         let divFondo= $('<div></div>');
@@ -18,14 +18,16 @@ function agregarElemento(arreglo){
             $(div).addClass("ejercicio");
             $(divFondo).addClass("fondoE");
         }
-        div.css('background-color', 'rgba(240, 240, 240, 0.6)');
+        $(div).css('background-color', 'rgba(240, 240, 240, 0.6)');
         let h3= $("<h3></h3>");
-        let ahref = ('<a></a>');
-        // ahref.href=name+"/index.html";
-        $(ahref).text(name);
+        let ahref = $('<a></a>');
+        //$(ahref).attr('href', name+"/index.html"); --> el modal tiene que redireccionar, no 'a'
+        $(ahref).html(name);
         $(ahref).attr('id', name);
 
-        //crear modal//
+          /////////////////
+         // crear modal //
+        /////////////////
 
         let modal = $('<div></div>');
         $(modal).addClass('modal');
@@ -50,19 +52,20 @@ function agregarElemento(arreglo){
         // When the user clicks on the button, open the modal
         $(btn).click(function(){
             console.log(modal);
-            $(modal).fadeToggle(1400);
+            $(modal).fadeToggle(500);
         });
         
         // When the user clicks on <span> (x), close the modal
         close.click(function() {
-            $(modal).fadeToggle(1400);
+            $(modal).toggle(500);
         });
         
         // When the user clicks anywhere outside of the modal, close it
         $(document).click(function(){
-            if($(modal).css('display') != 'none'){
-                $(modal).hide();
-            }
+            //console.log($(modal).css('display'));
+            /*if($(modal).css('display') != 'block'){
+                $(modal).toggle(500);
+            }*/
         })
         /*
         window.onclick = function() {
@@ -79,11 +82,9 @@ function agregarElemento(arreglo){
         //contenedor.appendChild(divFondo);
         // console.log(arreglo == arrayDeProyectos);
         if (arreglo == arrayDeProyectos){
-            console.log("hola")
             divPro.append(divFondo);
         }
         else {
-            console.log("hola2")
             divEje.append(divFondo);
         }
         divFondo.append(div);
