@@ -4,32 +4,34 @@ var arrayDeEjercicios = [];
 function agregarElemento(arreglo){
     for(let i=arreglo.length-1; i>=0;i--){
         let name = arreglo[i];
-        console.log(i);
-        console.log(name);
-        let divPro = document.getElementById("proyectos");
-        let divEje = document.getElementById("ejercicios");
-        let divFondo= document.createElement('div');
-        divFondo.style.backgroundImage =  'url("'+name+'/'+name+'.jpg")';
-        let div = document.createElement('div');
+        //console.log(i);
+        //console.log(name);
+        let divPro = $("#proyectos");
+        let divEje = $("#ejercicios");
+        let divFondo= $('<div></div>');
+        $(divFondo).css('background-image', 'url("'+name+'/'+name+'.jpg")');
+        let div = $('<div></div>');
         if (arreglo == arrayDeProyectos){
-            div.className= "proyecto";
-            divFondo.className = "fondoP";
+            $(div).addClass("proyecto");
+            $(divFondo).addClass("fondoP");
         } else {
-            div.className= "ejercicio";
-            divFondo.className = "fondoE";
+            $(div).addClass("ejercicio");
+            $(divFondo).addClass("fondoE");
         }
-        div.style.backgroundColor= 'rgba(240, 240, 240, 0.6)';
-        let h3= document.createElement("h3");
-        let ahref = document.createElement('a');
-        // ahref.href=name+"/index.html";
-        ahref.textContent=name;
-        ahref.id = name;
+        $(div).css('background-color', 'rgba(240, 240, 240, 0.6)');
+        let h3= $("<h3></h3>");
+        let ahref = $('<a></a>');
+        //$(ahref).attr('href', name+"/index.html"); --> el modal tiene que redireccionar, no 'a'
+        $(ahref).html(name);
+        $(ahref).attr('id', name);
 
-        //crear modal//
+          /////////////////
+         // crear modal //
+        /////////////////
 
-        let modal = document.createElement('div');
-        modal.className = 'modal';
-        modal.id = 'modal'+name;
+        let modal = $('<div></div>');
+        $(modal).addClass('modal');
+        $(modal).attr('id', 'modal'+name);
         $(modal).html(
             `<div class="modal-content" id=${name}>
             <span class="close">&times;</span>
@@ -50,37 +52,42 @@ function agregarElemento(arreglo){
         // When the user clicks on the button, open the modal
         $(btn).click(function(){
             console.log(modal);
-            $(modal).fadeToggle(1400);
+            $(modal).fadeToggle(500);
         });
         
         // When the user clicks on <span> (x), close the modal
         close.click(function() {
-            $(modal).fadeToggle(1400);
+            $(modal).toggle(500);
         });
         
         // When the user clicks anywhere outside of the modal, close it
+        $(document).click(function(){
+            //console.log($(modal).css('display'));
+            /*if($(modal).css('display') != 'block'){
+                $(modal).toggle(500);
+            }*/
+        })
+        /*
         window.onclick = function() {
           if (modal.style.display != none) {
             modal.style.display = "none";
           }
-        } 
+        } */
 
 
         
-        h3.appendChild(ahref);
-        div.appendChild(h3);
-        div.appendChild(modal);
+        h3.append(ahref);
+        div.append(h3);
+        div.append(modal);
         //contenedor.appendChild(divFondo);
         // console.log(arreglo == arrayDeProyectos);
         if (arreglo == arrayDeProyectos){
-            console.log("hola")
-            divPro.appendChild(divFondo);
+            divPro.append(divFondo);
         }
         else {
-            console.log("hola2")
-            divEje.appendChild(divFondo);
+            divEje.append(divFondo);
         }
-        divFondo.appendChild(div);
+        divFondo.append(div);
     }
 }
 
