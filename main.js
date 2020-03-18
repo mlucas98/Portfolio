@@ -3,13 +3,13 @@ var arrayDeEjercicios = [];
 
 function agregarElemento(arreglo){
     for(let i=arreglo.length-1; i>=0;i--){
-        let name = arreglo[i];
+        let projectObject = arreglo[i];
         //console.log(i);
-        //console.log(name);
+        //console.log(projectObject);
         let divPro = $("#proyectos");
         let divEje = $("#ejercicios");
         let divFondo= $('<div></div>');
-        $(divFondo).css('background-image', 'url("'+name+'/'+name+'.jpg")');
+        $(divFondo).css('background-image', 'url("'+projectObject.name+'/'+projectObject.name+'.jpg")');
         let div = $('<div></div>');
         if (arreglo == arrayDeProyectos){
             $(div).addClass("proyecto");
@@ -21,9 +21,9 @@ function agregarElemento(arreglo){
         $(div).css('background-color', 'rgba(240, 240, 240, 0.6)');
         let h3= $("<h3></h3>");
         let ahref = $('<a></a>');
-        //$(ahref).attr('href', name+"/index.html"); --> el modal tiene que redireccionar, no 'a'
-        $(ahref).html(name);
-        $(ahref).attr('id', name);
+        //$(ahref).attr('href', projectObject+"/index.html"); --> el modal tiene que redireccionar, no 'a'
+        $(ahref).html(projectObject.name);
+        $(ahref).attr('id', projectObject.name);
 
           /////////////////
          // crear modal //
@@ -31,17 +31,18 @@ function agregarElemento(arreglo){
 
         let modal = $('<div></div>');
         $(modal).addClass('modal');
-        $(modal).attr('id', 'modal'+name);
+        $(modal).attr('id', 'modal'+projectObject);
         $(modal).html(
-            `<div class="modal-content" id=${name}>
+            `<div class="modal-content" id=${projectObject.name}>
             <span class="close">&times;</span>
-                <h1>${name}</h1>
-                <p class="parrafo-modal">  </p>
-                <button><a href="${name}/index.html">Ir</a></button>
+                <h1>${projectObject.name}</h1>
+                <p class="parrafo-modal">${projectObject.description}</p>
+                <button><a href="${projectObject.url}">Ir</a></button>
             </div>
             `
         );
-        console.log(modal);
+        
+        
         
         // Get the button that opens the modal
         var btn = $(ahref);
@@ -57,7 +58,7 @@ function agregarElemento(arreglo){
         
         // When the user clicks on <span> (x), close the modal
         close.click(function() {
-            $(modal).toggle(500);
+            $(modal).fadeToggle(500);
         });
         
         // When the user clicks anywhere outside of the modal, close it
@@ -91,28 +92,12 @@ function agregarElemento(arreglo){
     }
 }
 
-arrayDeProyectos.push('Pixel-Art');
-arrayDeProyectos.push('Rompecabezas');
+arrayDeProyectos.push({'name' : 'Pixel-Art', 'url' : 'Pixel-Art/index.html', 'description' : 'Descripción del proyecto Pixel-Art'});
+arrayDeProyectos.push({'name' : 'Rompecabezas', 'url' : 'Rompecabezas/index.html', 'description' : 'Descripción del proyecto Rompecabezas'});
+arrayDeProyectos.push({'name' : 'Testing', 'url' : 'Testing/html/index.html', 'description' : 'Descripción del proyecto de Testing'});
+arrayDeProyectos.push({'name' : 'Encuestados', 'url' : 'Encuestados/index.html', 'description' : 'El proyecto consiste en un programa de preguntas y respuestas aplicando el patrón MVC. Posee la vista tanto de Administrador como la de Usuario.'})
 
-arrayDeEjercicios.push('Calculadora')
+arrayDeEjercicios.push({'name' : 'Calculadora', 'url' : 'Rompecabezas/index.html', 'description' : 'Descripción del proyecto Calculadora'});
 
 agregarElemento(arrayDeProyectos);
 agregarElemento(arrayDeEjercicios);
-
-
-
-let descripcion = $('#modalRompecabezas').find('.parrafo-modal');
-console.log(descripcion);
-$(descripcion).html(
-     "Descripción del proyecto Rompecabezas"
- );
-
-descripcion = $('#modalPixel-Art').find('.parrafo-modal');
-$(descripcion).html(
-     "Descripción del proyecto Pixel-Art"
- );
-
- descripcion = $('#modalCalculadora').find('.parrafo-modal');
-$(descripcion).html(
-     "Descripción del proyecto Calculadora"
- );
