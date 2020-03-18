@@ -95,6 +95,7 @@ function agregarElemento(arreglo){
 arrayDeProyectos.push({'name' : 'Pixel-Art', 'url' : 'Pixel-Art/index.html', 'description' : 'Descripción del proyecto Pixel-Art'});
 arrayDeProyectos.push({'name' : 'Rompecabezas', 'url' : 'Rompecabezas/index.html', 'description' : 'Descripción del proyecto Rompecabezas'});
 arrayDeProyectos.push({'name' : 'Testing', 'url' : 'Testing/html/index.html', 'description' : 'Descripción del proyecto de Testing'});
+arrayDeProyectos.push({'name' : 'Encuestados', 'url' : 'Encuestados/index.html', 'description' : 'El proyecto consiste en un programa de preguntas y respuestas aplicando el patrón MVC. Posee la vista tanto de Administrador como la de Usuario.'})
 
 arrayDeEjercicios.push({'name' : 'Calculadora', 'url' : 'Rompecabezas/index.html', 'description' : 'Descripción del proyecto Calculadora'});
 
