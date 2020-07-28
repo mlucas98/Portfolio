@@ -1,10 +1,11 @@
 body {
     box-sizing: border-box;
+    font-family: 'Concert One', cursive;
 }
 
 .parallax {
     /* The image used */
-    background-image: url("img/springfield.jpg");
+    background-image: url("img/background.jpg");
     /* Set a specific height */
     height: 700px;
     /* Create the parallax scrolling effect */
@@ -16,14 +17,22 @@ body {
 
 h1 {
     color: white;
+    font-size: 3rem;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .blockquote {
     color: white;
 }
 
-.container {
-    background-color: rgba(245, 245, 245, 0.8);
+.navbar-dark .navbar-nav .nav-link.smooth {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link.smooth {
+    /* color: #2E382E;
+    color: #404E4D; */
+    color: #C3423F;
 }
 
 .proyecto {
@@ -71,6 +80,18 @@ h4 {
 h4 a {
     text-decoration: none;
 }
+
+.img-thumbnail {
+    max-width: 100px;
+    border-radius: 3%;
+}
+
+.img-mini {
+    max-width: 20%;
+}
+
+
+/* Modal proyectos */
 
 .modal {
     display: none;
