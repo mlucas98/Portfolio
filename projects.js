@@ -6,15 +6,22 @@ function agregarElemento(arreglo) {
         let projectObject = arreglo[i];
         let proyectos = $("#proyectos");
         let divFondo = $('<div></div>');
-        $(divFondo).addClass(['col-md-4', 'fondoP']);
-        $(divFondo).css('background-image', 'url("img/proyectos/' + projectObject.name + '.jpg")');
-        let h4 = $("<h4></h4>");
+        $(divFondo).addClass(['p-1', 'col-md-4', 'fondoP'])
+        let imagen = $('<img>');
+        $(imagen).attr('src', 'img/proyectos/' + projectObject.name + '.jpg');
+        $(imagen).addClass(['d-block', 'w-100']);
+        let divContenido = $('<div></div>');
+        $(divContenido).addClass(['overlay', 'd-flex', 'justify-content-center']);
+        let h4 = $("<h4 ></h4>");
+        $(h4).addClass(['align-self-center', ]);
         let ahref = $('<a></a>');
         $(ahref).html(projectObject.name);
         $(ahref).attr('id', projectObject.name);
 
         h4.append(ahref);
-        divFondo.append(h4);
+        divContenido.append(h4);
+        divFondo.append(imagen);
+        divFondo.append(divContenido);
         proyectos.append(divFondo);
     }
 }
