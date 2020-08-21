@@ -62,7 +62,7 @@ h1 {
     transition: 0.5s ease;
     width: 100%;
     height: 100%;
-    background: red;
+    background: #7C90A0;
 }
 
 h2 {
@@ -73,7 +73,7 @@ h4 {
     padding: 1% 0;
     text-align: center;
     font-size: x-large;
-    color: rgb(0, 0, 220);
+    color: white;
     animation: ease;
     animation-duration: 1s;
 }
@@ -86,9 +86,27 @@ h4 a {
     opacity: 1;
 }
 
-.img-thumbnail {
-    max-width: 100px;
-    border-radius: 3%;
+.skills div a:after {
+    content: '';
+    width: 10%;
+    height: 2px;
+    background: #E8ECED;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease-out;
+}
+
+.skills div a:hover:after {
+    width: 100%;
+    background: #7C90A0;
+}
+
+.skills div a img:hover {
+    max-width: 102%;
+    margin-top: -5px;
+    /* box-shadow: 1px 10px #888888; */
 }
 
 .wave-container {

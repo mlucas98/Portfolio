@@ -30,6 +30,9 @@ arrayDeProyectos.push({ 'name': 'Pixel-Art', 'url': '#', 'description': 'Descrip
 arrayDeProyectos.push({ 'name': 'Rompecabezas', 'url': '#', 'description': 'Descripción del proyecto Rompecabezas' });
 arrayDeProyectos.push({ 'name': 'Testing', 'url': '#', 'description': 'Descripción del proyecto de Testing' });
 arrayDeProyectos.push({ 'name': 'Encuestados', 'url': '#', 'description': 'El proyecto consiste en un programa de preguntas y respuestas aplicando el patrón MVC. Posee la vista tanto de Administrador como la de Usuario.' })
+arrayDeProyectos.push({ 'name': 'Que Veo Hoy', 'url': '#', 'description': 'Aplicación que recomienda qué película ver basandose en distintos filtros.' })
+arrayDeProyectos.push({ 'name': 'Peli vs Peli', 'url': '#', 'description': 'Aplicación que permite crear competencias entre películas de una base de datos local.' })
+arrayDeProyectos.push({ 'name': 'Dandelion', 'url': '#', 'description': 'Desarrollo de la web institucional de la escuela de comedia musical Dandelion.' })
 
 
 agregarElemento(arrayDeProyectos);
