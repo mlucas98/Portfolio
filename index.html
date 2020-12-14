@@ -112,77 +112,54 @@
             <div class="container mt-5">
                 <div class="row mt-3">
                     <div class="col-12">
-                        <h2>Contact</h2>
-                        <i class="fas fa-html5    "></i>
-                        <span>LinkedIn</span>
-                        <span>Twitter</span>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+                            Launch demo modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="contactModalLabel">Contact</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-12 mb-4">
+                                                Here are different ways to reach me out, I'll be glad to answer!
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a href=""><img class="w-50" src="img/iconos/email.png" alt="Email"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="https://www.linkedin.com/in/lucas-massaro-97a17a1a6/"><img class="w-50" src="img/iconos/linkedin.png" alt="LinkedIn"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="https://github.com/mlucas98"><img class="w-50" src="img/iconos/github.png" alt="GitHub"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href=""> <img class="w-50" src="img/iconos/pdf.png" alt="Resumee"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="container-fluid">
-                        <div class="row text-center">
-                            <div class="col-12">
-                                <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
-                                <hr>
-                                <span class="txt-modal">Manuel Castro 478, Lomas de Zamora</span><br>
-                                <a class="txt-modal" id="whatsapp" href="#">1563648663</a> <br>
-                                <span class="txt-modal">dandelion.artesescenicas@gmail.com</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-                </div>
-                <div class="modal-body">
-
-                    <form class="needs-validation" novalidate action="/" id="formulario">
-                        <div class="form-row pb-3">
-                            <div class="col">
-                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
-                                <div class="invalid-feedback">
-                                    Ingrese su nombre
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row pb-3">
-                            <div class="col">
-                                <input type="email" name="email" class="form-control" placeholder="Email" required>
-                                <div class="invalid-feedback">
-                                    Ingrese un email válido
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row pb-3">
-                            <div class="col-2">
-                                <input type="text" name="edad" class="form-control" placeholder="Edad">
-                            </div>
-                            <div class="col">
-                                <input type="text" name="telefono" class="form-control" placeholder="Teléfono (opcional)" aria-describedby="ayudaTelefono">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <textarea class="form-control" name="mensaje" id="exampleFormControlTextarea1" rows="" placeholder="Mensaje" required></textarea>
-                            <div class="invalid-feedback">
-                                Ingrese su mensaje
-                            </div>
-                        </div>
-                        <div class="text-right pt-2">
-                            <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancelar</button>
-                            <button class="btn btn-success ml-auto" type="submit">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <footer class="footer mt-3">
         Lucas Massaro 2020
     </footer>
