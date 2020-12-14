@@ -37,6 +37,33 @@ h1:hover {
     color: #dd8d58;
 }
 
+h2 {
+    font-size: xx-large;
+    position: relative;
+}
+
+
+/* Crear elemento abajo de todo sin ancho*/
+
+h2:before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ef3e3a;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
+/*Animar el ancho */
+
+h2:hover:before {
+    width: 100%;
+}
+
 .ml1 .letter {
     display: inline-block;
     line-height: 1em;
@@ -83,10 +110,6 @@ h1:hover {
     background: #7C90A0;
 }
 
-h2 {
-    font-size: xx-large;
-}
-
 h4 {
     padding: 1% 0;
     text-align: center;
@@ -94,10 +117,6 @@ h4 {
     color: white;
     animation: ease;
     animation-duration: 1s;
-}
-
-h4 a {
-    text-decoration: none;
 }
 
 .fondoP:hover .overlay {
