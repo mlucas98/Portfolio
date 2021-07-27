@@ -36,6 +36,7 @@ arrayDeProyectos.push({ 'name': 'Que Veo Hoy', 'url': 'https://github.com/mlucas
 arrayDeProyectos.push({ 'name': 'Peli vs Peli', 'url': 'https://github.com/mlucas98/peli-vs-peli', 'description': 'Aplicación que permite crear competencias entre películas de una base de datos local.' });
 arrayDeProyectos.push({ 'name': 'Dandelion', 'url': 'https://www.dandelionarte.com.ar/', 'description': 'Desarrollo de la web institucional de la escuela de comedia musical Dandelion.' });
 arrayDeProyectos.push({ 'name': 'EasyBank Landing', 'url': 'https://mlucas98.github.io/easyBank-landing/', 'description': 'Landing page para un banco ficticio. Hecho con scss, html y js' });
+arrayDeProyectos.push({ 'name': 'Películas App', 'url': 'https://mlucas98.github.io/peliculasApp/home', 'description': 'Enciclopedia de películas usando información de TMDB y realizada con Angular' });
 
 https: //github.com/mlucas98/que-veo-hoy
     agregarElemento(arrayDeProyectos);
